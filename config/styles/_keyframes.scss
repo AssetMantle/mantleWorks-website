@@ -2,22 +2,32 @@
   0% {
     transform: translateY(-200%) scale(1);
     height: 0;
+    opacity: 0;
   }
   100% {
     transform: translateY(0) scale(1);
     height: auto;
+    opacity: 1;
   }
 }
 
-@keyframes problemBox {
+@keyframes problemBoxG1 {
   0%,
   100% {
-    opacity: 0.3;
     transform: rotate(0deg);
   }
   50% {
-    opacity: 1;
-    transform: rotate(30deg);
+    transform: rotate(31.5deg) translateX(-9px) translateY(5px);
+  }
+}
+
+@keyframes problemBoxG3 {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-30.5deg) translateX(-3px) translateY(3px);
   }
 }
 
