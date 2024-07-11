@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="am-mw-footer position-fixed bottom-0 start-0 end-0 w-100">
       <div className="am-mw-footer-line"></div>
-      <div className="am-mw-footer-container d-flex flex-column flex-md-row align-items-center justify-content-md-between">
+      <div className="am-mw-footer-container d-flex flex-column flex-md-row align-items-center justify-content-md-between gap-2">
         <Link href="#hero" className="logo position-relative">
           <Image
             src={Logo}
