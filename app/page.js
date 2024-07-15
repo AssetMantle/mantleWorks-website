@@ -1,17 +1,15 @@
 import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
+import Hero from "@/views/Hero";
 import Problems from "@/views/Problems";
-import Image from "next/image";
 
 export default function Home() {
   return (
     <>
       <Header />
 
-      <main>
-        <section id="hero">
-          <div className="timeline"></div>
-        </section>
+      <main className="am-mw-bg-gradient">
+        <Hero />
         <section id="scrolling"></section>
         <Problems />
         <section id="layout"></section>
