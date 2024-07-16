@@ -1,5 +1,6 @@
 // @import "./demo";
 @import "./keyframes";
+@import "./functions";
 
 *,
 *::after,
@@ -9,6 +10,10 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
+@include font("PixeloidMono", "/media/fonts/PixeloidMono.tff", 400);
+@include font("PixeloidSans", "/media/fonts/PixeloidSans.tff", 400);
+@include font("PixeloidSansBold", "/media/fonts/PixeloidSansBold.tff", 800);
 
 :root {
   --white: #fdfdfd;
@@ -32,12 +37,19 @@
   --bg-white: var(--white-200);
 
   --am-mw-container: calc(1192px + 48px);
+
+  --font-pixeloidmono: PixeloidMono, monospace;
+  --font-pixeloidsans: PixeloidSans, monospace;
+  --font-pixeloidsans-bold: PixeloidSansBold, monospace;
 }
 
 html {
   font-size: 16px;
   scroll-snap-type: y mandatory;
   timeline-scope: --section, --main, --hero;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 body {
@@ -64,43 +76,62 @@ section {
   padding-top: 0;
   margin: 0 auto;
   position: relative;
+  & > * {
+    z-index: 1;
+  }
   & > .timeline {
     position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0;
     view-timeline: --hero;
+    z-index: 0;
   }
 }
 
 .am-mw {
-  &-bg-gradient {
-    background-image: url("/media/bg-pattern.png");
-    background-size: 30px 30px;
-    background-repeat: repeat;
-    background-position: -200px;
+  &-bg {
+    &-gradient {
+      &-red-blue {
+        background: linear-gradient(
+          270deg,
+          #14f094 2.85%,
+          #683ce4 41.1%,
+          #ea37a3 64.45%,
+          #ff2f49 83.33%,
+          #ff930f 101.71%
+        );
+      }
+    }
+    &-grid {
+      background-image: url("/media/bg-pattern.png");
+      background-size: 30px 30px;
+      background-repeat: repeat;
+      background-position: -200px;
+    }
   }
   &-header {
-    background-image: linear-gradient(
-      270deg,
-      #0000ff 13.78%,
-      #00ff00 48.56%,
-      #ff930f 73.39%,
-      #ff0000 101.71%
-    );
+    &-line {
+      background-image: linear-gradient(
+        270deg,
+        #0000ff 13.78%,
+        #00ff00 48.56%,
+        #ff930f 73.39%,
+        #ff0000 101.71%
+      );
+      height: 2px;
+    }
     z-index: 999;
     overflow: hidden;
     animation: headerAppear ease-in-out both;
     animation-timeline: --hero;
     transform-origin: top center;
     &-container {
-      margin-bottom: 2px;
-      background-color: var(--bg-white);
       &-content {
         position: relative;
         width: min(var(--am-mw-container), 100%);
         margin: 0 auto;
-        padding: 24px;
+        padding: 20px 24px 18px;
         & > .logo {
           height: 24px;
           aspect-ratio: 206.11/24;
