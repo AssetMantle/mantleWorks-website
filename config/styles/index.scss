@@ -147,6 +147,54 @@ section {
     animation-timeline: --section;
     margin: 0 auto;
   }
+  &-hero {
+    &-bg {
+      width: min(1440px, 100%);
+      background-image: url("/media/bgs/hero-bg.png");
+      background-size: contain;
+      background-position: bottom right;
+      background-repeat: no-repeat;
+    }
+    width: min(1248px, 100%);
+    margin: 0 auto;
+    padding: 24px;
+    gap: 2rem;
+    @media (max-width: 600px) {
+      align-items: center;
+      & > * {
+        text-align: center;
+      }
+    }
+    & > .image-container {
+      & > .image {
+        width: min(326.34px, 100%);
+        aspect-ratio: 326.34/38;
+      }
+    }
+    & > p.links {
+      font-size: 1.33rem;
+      color: var(--primary-dark);
+      font-weight: 400;
+      text-decoration: none;
+      margin-bottom: 0;
+      & > a {
+        font-size: 1.33rem;
+        color: var(--primary-dark);
+        font-weight: 400;
+        text-decoration: none;
+      }
+    }
+    & > .arrow-down {
+      & > button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        width: 44px;
+        aspect-ratio: 44/24;
+        position: relative;
+      }
+    }
+  }
   &-problems {
     width: min(1440px, 100%);
     display: flex;
