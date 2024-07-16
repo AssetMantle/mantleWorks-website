@@ -17,6 +17,7 @@ export default function Header() {
           </Link>
         </div>
       </div>
+      <div className="am-mw-header-line"></div>
     </header>
   );
 }
