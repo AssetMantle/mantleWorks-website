@@ -1,8 +1,6 @@
-import { Inter } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@/config/styles/index.scss";
-
-const inter = Inter({ subsets: ["latin"] });
+import { inter } from "@/config/fonts/GoogleFonts";
 
 export const metadata = {
   title: "Create Next App",
