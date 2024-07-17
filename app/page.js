@@ -2,15 +2,16 @@ import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import Hero from "@/views/Hero";
 import Problems from "@/views/Problems";
+import WhatWeDo from "@/views/WhatWeDo";
 
 export default function Home() {
   return (
     <>
       <Header />
 
-      <main className="am-mw-bg-gradient">
+      <main className="am-mw-bg-grid">
         <Hero />
-        <section id="scrolling"></section>
+        <WhatWeDo />
         <Problems />
         <section id="layout"></section>
         <section id="transition"></section>
