@@ -1,9 +1,7 @@
 "use client";
-import { Montserrat } from "next/font/google";
+import { montserrat } from "@/config/fonts/GoogleFonts";
 import Image from "next/image";
 import { useRef } from "react";
-
-const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default function WhatWeDo() {
   const videoRef = useRef();
