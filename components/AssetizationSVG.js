@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function AssetizationSVG({ current }) {
   return (
     <svg
@@ -96,23 +94,23 @@ export default function AssetizationSVG({ current }) {
       <path
         d="M340.759 351L535.149 461.29"
         stroke="#FDFDFD"
-        stroke-width="3"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="3"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
       />
       <path
         d="M340.16 350.73L145.76 461.02"
         stroke="#FDFDFD"
-        stroke-width="3"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="3"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
       />
       <path
         d="M340.455 131L340.455 352"
         stroke="#FDFDFD"
-        stroke-width="3"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="3"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
       />
       <g filter="url(#filter6_d_444_3877)"></g>
       <g className="central-sphere">
@@ -122,7 +120,7 @@ export default function AssetizationSVG({ current }) {
           width="291"
           height="265"
           fill="url(#pattern0_444_3877)"
-          shape-rendering="crispEdges"
+          shapeRendering="crispEdges"
         />
         <circle
           cx="338.259"
@@ -150,181 +148,181 @@ export default function AssetizationSVG({ current }) {
         opacity="0.4"
         d="M210.86 203.11V498.49"
         stroke="#F7F2EB"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-dasharray="4 4"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeDasharray="4 4"
       />
       <path
         opacity="0.4"
         d="M405.03 167.53V535.17"
         stroke="#F7F2EB"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-dasharray="4 4"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeDasharray="4 4"
       />
       <path
         opacity="0.4"
         d="M469.031 203.11V498.73"
         stroke="#F7F2EB"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-dasharray="4 4"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeDasharray="4 4"
       />
       <path
         d="M534.959 461.5L534.959 240.5"
         stroke="#FDFDFD"
-        stroke-width="5"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="5"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
       />
       <path
         opacity="0.4"
         d="M145.76 388.41L405.03 535.17"
         stroke="#F7F2EB"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-dasharray="4 4"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeDasharray="4 4"
       />
       <path
         opacity="0.4"
         d="M145.759 315.63L469.029 498.73"
         stroke="#F7F2EB"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-dasharray="4 4"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeDasharray="4 4"
       />
       <path
         opacity="0.4"
         d="M210.86 203.11L470.35 350.73"
         stroke="#F7F2EB"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-dasharray="4 4"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeDasharray="4 4"
       />
       <path
         opacity="0.4"
         d="M275.51 167.53L534.55 315.45"
         stroke="#F7F2EB"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-dasharray="4 4"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeDasharray="4 4"
       />
       <path
         opacity="0.4"
         d="M340.16 277.55L534.55 387.84"
         stroke="#F7F2EB"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-dasharray="4 4"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeDasharray="4 4"
       />
       <path
         d="M340.16 130L534.55 240.29"
         stroke="#FDFDFD"
-        stroke-width="3"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="3"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
       />
       <path
         d="M534.549 461.56L340.758 572"
         stroke="#FDFDFD"
-        stroke-width="3"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="3"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
       />
       <path
         opacity="0.4"
         d="M534.55 388.41L275.51 535.17"
         stroke="#F7F2EB"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-dasharray="4 4"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeDasharray="4 4"
       />
       <path
         opacity="0.4"
         d="M534.55 315.63L210.86 498.49"
         stroke="#F7F2EB"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-dasharray="4 4"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeDasharray="4 4"
       />
       <path
         d="M534.55 240.44L340.16 350.73"
         stroke="#FDFDFD"
-        stroke-width="3"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="3"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
       />
       <path
         d="M340.16 130L145.76 240.29"
         stroke="#FDFDFD"
-        stroke-width="3"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="3"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
       />
       <path
         opacity="0.4"
         d="M403.36 165.86L145.76 315.45"
         stroke="#F7F2EB"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-dasharray="4 4"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeDasharray="4 4"
       />
       <path
         opacity="0.4"
         d="M469.009 203.11L145.759 387.84"
         stroke="#F7F2EB"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-dasharray="4 4"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeDasharray="4 4"
       />
       <path
         d="M145.76 461.56L340.759 572"
         stroke="#FDFDFD"
-        stroke-width="3"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="3"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
       />
       <path
         d="M145.76 240.44L340.16 350.73"
         stroke="#FDFDFD"
-        stroke-width="3"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="3"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
       />
       <path
         d="M145.959 461.5L145.959 240.5"
         stroke="#FDFDFD"
-        stroke-width="3"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="3"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
       />
       <path
         opacity="0.4"
         d="M275.51 167.53V535.17"
         stroke="#F7F2EB"
-        stroke-width="2"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
-        stroke-dasharray="4 4"
+        strokeWidth="2"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
+        strokeDasharray="4 4"
       />
       <path
         d="M340.455 351L340.455 572"
         stroke="#FDFDFD"
-        stroke-width="3"
-        stroke-miterlimit="10"
-        stroke-linecap="round"
+        strokeWidth="3"
+        strokeMiterlimit="10"
+        strokeLinecap="round"
       />
       <defs>
         <filter
@@ -334,9 +332,9 @@ export default function AssetizationSVG({ current }) {
           width="292.256"
           height="187.896"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -387,9 +385,9 @@ export default function AssetizationSVG({ current }) {
           width="54.728"
           height="330"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -440,9 +438,9 @@ export default function AssetizationSVG({ current }) {
           width="292.256"
           height="187.896"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -493,9 +491,9 @@ export default function AssetizationSVG({ current }) {
           width="292.256"
           height="187.896"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -546,9 +544,9 @@ export default function AssetizationSVG({ current }) {
           width="54.728"
           height="330"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -599,9 +597,9 @@ export default function AssetizationSVG({ current }) {
           width="292.256"
           height="187.896"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -652,9 +650,9 @@ export default function AssetizationSVG({ current }) {
           width="491"
           height="465"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
             in="SourceAlpha"
             type="matrix"
@@ -699,8 +697,8 @@ export default function AssetizationSVG({ current }) {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(338.259 340.5) scale(47.5 47.5)"
         >
-          <stop offset="0.473958" stop-color="#FFC640" />
-          <stop offset="1" stop-color="#F2AF13" />
+          <stop offset="0.473958" stopColor="#FFC640" />
+          <stop offset="1" stopColor="#F2AF13" />
         </radialGradient>
         <image id="image0_444_3877" width="1920" height="1080" xlinkHref="" />
       </defs>

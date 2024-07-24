@@ -1,3 +1,36 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals", // Next.js recommended rules
+    "eslint:recommended", // ESLint recommended rules
+    "plugin:react/recommended", // React recommended rules
+    "plugin:react-hooks/recommended", // React Hooks recommended rules
+    "plugin:jsx-a11y/recommended", // Accessibility rules for JSX
+    "prettier" // Prettier integration
+  ],
+  "rules": {
+    "react/prop-types": "off", // Disable prop-types validation (if using TypeScript)
+    "react/react-in-jsx-scope": "off", // No need to import React in JSX (Next.js does this automatically)
+    "react/jsx-uses-react": "off", // No need to validate React usage in JSX (deprecated in React 17)
+    "react/jsx-uses-vars": "error", // Ensure variables used in JSX are declared
+    "react-hooks/exhaustive-deps": "warn", // Check dependencies in useEffect and useCallback
+    "no-unused-vars": "warn", // Check for unused variables
+    "no-undef": "error", // Check for usage of undeclared variables
+    "jsx-a11y/anchor-is-valid": "off" // Disable 'href' validation for Next.js Link component
+  },
+  "settings": {
+    "react": {
+      "version": "detect" // Automatically detect React version
+    }
+  },
+  "parserOptions": {
+    "ecmaVersion": 2021, // Use ECMAScript 2021 features
+    "sourceType": "module", // Use module imports
+    "ecmaFeatures": {
+      "jsx": true // Enable JSX parsing
+    }
+  },
+  "env": {
+    "browser": true, // Enable browser globals
+    "node": true // Enable Node.js globals
+  }
 }
