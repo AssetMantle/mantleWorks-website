@@ -6,9 +6,10 @@ import Logo from "@/public/media/logo.png";
 export default function Hero() {
   function handleScroll(e) {
     if (window) {
-      window.scrollBy(0, 30);
+      window.scrollTo(0, window.innerHeight);
     }
   }
+
   return (
     <section id="hero" className="am-mw-hero-bg">
       <div className="timeline"></div>
