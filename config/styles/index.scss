@@ -143,6 +143,39 @@ section {
       }
     }
   }
+  &-slideIndicator {
+    position: fixed;
+    top: 0;
+    right: 24px;
+    height: 100dvh !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+
+    animation: sliderAppear ease-in-out both;
+    animation-timeline: --hero;
+    transform-origin: center right;
+    @media (max-width: 600px) {
+      right: 8px;
+    }
+    & > .indicator {
+      width: 16px;
+      aspect-ratio: 1/1;
+      border: 0.75px solid var(--gray-dark);
+      box-sizing: border-box;
+      transition: all 500ms ease-in-out;
+      background-color: transparent;
+      &.mw-4 {
+        border-color: var(--gray);
+      }
+      &.active {
+        transform: rotate(-45deg);
+        background-color: var(--indicator-bg);
+        border-color: var(--indicator-bg);
+      }
+    }
+  }
   &-container {
     overflow: hidden;
     position: fixed;
