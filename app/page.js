@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import SlideIndicator from "@/components/SlideIndicator";
 import Assetization from "@/views/Assetization";
 import Hero from "@/views/Hero";
+import OurPractice from "@/views/OurPractice";
 import Problems from "@/views/Problems";
 import WhatWeDo from "@/views/WhatWeDo";
 import { useEffect, useState } from "react";
@@ -21,8 +22,6 @@ export default function Home() {
     }
   }, []);
 
-  console.log(Position);
-
   return (
     <>
       <Header />
@@ -33,6 +32,7 @@ export default function Home() {
         <Problems />
         <section id="containerisation"></section>
         <Assetization />
+        <OurPractice />
       </main>
 
       <SlideIndicator indicator={Position} />
