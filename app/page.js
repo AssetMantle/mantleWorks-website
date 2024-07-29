@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import SlideIndicator from "@/components/SlideIndicator";
 import Assetization from "@/views/Assetization";
 import Hero from "@/views/Hero";
+import OurPartners from "@/views/OurPartners";
 import OurPractice from "@/views/OurPractice";
 import Problems from "@/views/Problems";
 import WhatWeDo from "@/views/WhatWeDo";
@@ -33,6 +34,7 @@ export default function Home() {
         <section id="containerisation"></section>
         <Assetization />
         <OurPractice />
+        <OurPartners />
       </main>
 
       <SlideIndicator indicator={Position} />
