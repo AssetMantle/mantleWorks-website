@@ -3,6 +3,7 @@ import Footer from "@/components/layout/Footer";
 import Header from "@/components/layout/Header";
 import SlideIndicator from "@/components/SlideIndicator";
 import Assetization from "@/views/Assetization";
+import Containerisation from "@/views/Containerisation";
 import Hero from "@/views/Hero";
 import OurPartners from "@/views/OurPartners";
 import OurPractice from "@/views/OurPractice";
@@ -31,7 +32,7 @@ export default function Home() {
         <Hero />
         <WhatWeDo />
         <Problems />
-        <section id="containerisation"></section>
+        <Containerisation isViewing={Position === 3} />
         <Assetization />
         <OurPractice />
         <OurPartners />
