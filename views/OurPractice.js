@@ -115,7 +115,7 @@ export default function OurPractice() {
           </div>
           <div className="content center">
             <div className="cube">
-              <img src="/media/practice-cropped.gif" alt="cube rotation" />
+              <img src="/media/practice-2.gif" alt="cube rotation" />
               {/* <video
                 src="/media/practice-cropped.gif"
                 autoPlay
