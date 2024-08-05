@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function PartnersSVG({ active, onHover = () => {} }) {
   return (
     <svg
@@ -8,7 +6,7 @@ export default function PartnersSVG({ active, onHover = () => {} }) {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
-      <g clip-path="url(#clip0_1193_473)">
+      <g clipPath="url(#clip0_1193_473)">
         {/* <rect width="1440" height="900" fill="#F7F2EB00" /> */}
         <rect
           x="163.706"
