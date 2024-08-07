@@ -1,6 +1,6 @@
 import { inter } from "@/config/fonts/GoogleFonts";
-import "@/config/styles/index.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "@/config/styles/index.scss";
 
 export const metadata = {
   title: "Create Next App",
