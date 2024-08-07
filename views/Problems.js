@@ -1,4 +1,5 @@
 "use client";
+import { montserrat } from "@/config/fonts/GoogleFonts";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
@@ -84,7 +85,7 @@ export default function Problems() {
       <div className="am-mw-container am-mw-problems">
         <div className="am-mw-problems-content d-flex align-items-center">
           <div className="title">
-            <p className="m-0">Problems Faced</p>
+            <p className={`m-0 ${montserrat.className}`}>Problems Faced</p>
             <svg
               className="am-mw-problems-svg"
               viewBox="0 0 480 800"
@@ -217,9 +218,9 @@ export default function Problems() {
             {React.Children.toArray(
               problems.map((item, index) => (
                 <button
-                  className={`border-0 bg-transparent ${item?.buttonStyle} ${
-                    current + 1 === item?.value ? "active" : ""
-                  }`}
+                  className={`border-0 bg-transparent ${montserrat.className} ${
+                    item?.buttonStyle
+                  } ${current + 1 === item?.value ? "active" : ""}`}
                   style={item?.style}
                   onClick={() => setCurrent(index)}
                 >
