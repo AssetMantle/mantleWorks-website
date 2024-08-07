@@ -4,19 +4,54 @@ import React, { useState, useEffect } from "react";
 export default function Containerisation({ isViewing = false }) {
   const startAnimation = isViewing;
   const [current, setCurrent] = useState(0);
+  const [ExpHovered, setExpHovered] = useState(0);
   const changingInterval = 5000;
+
+  const codeMeanings = [
+    {
+      title: "Impact Assets",
+      color: "var(--yellow)",
+      handle: "yellow",
+    },
+    {
+      title: "Data Assets",
+      color: "var(--purple)",
+      handle: "purple",
+    },
+    {
+      title: "Credential Assets",
+      color: "var(--pink)",
+      handle: "pink",
+    },
+    {
+      title: "Property Assets",
+      color: "var(--blue)",
+      handle: "blue",
+    },
+    {
+      title: "Access Assets",
+      color: "var(--green)",
+      handle: "green",
+    },
+  ];
 
   const Containers = [
     {
       icon: "/media/containers/icons/Healthcare.png",
       title: "HealthCare",
+      subtitle: ["Transforming Data", "Into Assets"],
       description:
-        "SSI allows individual to have complete control over their abstracted account, to create, own, manage and share their identity information",
+        "Unlocking diagnostic data to enhance research and clinical outcomes, delivering real value for patients",
       images: {
         initial: "/media/containers/cubes/.png",
         background: "/media/containers/cubes/RedBG.png",
         front: "/media/containers/cubes/RedSingle.png",
       },
+      card: {
+        title: "hDoA",
+        description: ["HealthCare", "Digitally Owned Assets "],
+      },
+      assets: ["pink", "purple", "green"],
       style: {
         "--container-bg": "var(--red)",
       },
@@ -24,43 +59,61 @@ export default function Containerisation({ isViewing = false }) {
     {
       icon: "/media/containers/icons/RealEstate.png",
       title: "Real Estate",
+      subtitle: ["Revolutionizing Transparency", "And Investment"],
       description:
-        "SSI allows individual to have complete control over their abstracted account, to create, own, manage and share their identity information",
-      images: {
-        initial: "/media/containers/cubes/.png",
-        background: "/media/containers/cubes/PinkBG.png",
-        front: "/media/containers/cubes/PinkSingle.png",
-      },
-      style: {
-        "--container-bg": "var(--pink)",
-      },
-    },
-    {
-      icon: "/media/containers/icons/Hospitality.png",
-      title: "Hospitality",
-      description:
-        "SSI allows individual to have complete control over their abstracted account, to create, own, manage and share their identity information",
-      images: {
-        initial: "/media/containers/cubes/.png",
-        background: "/media/containers/cubes/PurpleBG.png",
-        front: "/media/containers/cubes/PurpleSingle.png",
-      },
-      style: {
-        "--container-bg": "var(--purple)",
-      },
-    },
-    {
-      icon: "/media/containers/icons/ESG.png",
-      title: "ESG",
-      description:
-        "SSI allows individual to have complete control over their abstracted account, to create, own, manage and share their identity information",
+        "Bridging info asymmetry for smarter property investing, fairer valuations, and performance-driven liquidity",
       images: {
         initial: "/media/containers/cubes/.png",
         background: "/media/containers/cubes/BlueBG.png",
         front: "/media/containers/cubes/BlueSingle.png",
       },
+      card: {
+        title: "rDoA",
+        description: ["Real Estate", "Digitally Owned Assets "],
+      },
+      assets: ["blue", "purple", "pink", "green"],
       style: {
         "--container-bg": "var(--blue)",
+      },
+    },
+    {
+      icon: "/media/containers/icons/Hospitality.png",
+      title: "Hospitality",
+      subtitle: ["Reimagining", "Customer Loyalty"],
+      description:
+        "Introducing loyalty assets that elevate customer loyalty, unlock exceptional experiences, and create an interoperable loyalty economy",
+      images: {
+        initial: "/media/containers/cubes/.png",
+        background: "/media/containers/cubes/OrangeBG.png",
+        front: "/media/containers/cubes/OrangeSingle.png",
+      },
+      card: {
+        title: "lDoA",
+        description: ["Loyalty", "Digitally Owned Assets "],
+      },
+      assets: ["pink", "purple"],
+      style: {
+        "--container-bg": "var(--orange)",
+      },
+    },
+    {
+      icon: "/media/containers/icons/ESG.png",
+      title: "ESG",
+      subtitle: ["Assetizing", "Sustainability"],
+      description:
+        "Tackling fragmented and inconsistent ESG data to enhance monitoring of ESG assets",
+      images: {
+        initial: "/media/containers/cubes/.png",
+        background: "/media/containers/cubes/GreenBG.png",
+        front: "/media/containers/cubes/GreenSingle.png",
+      },
+      card: {
+        title: "sDoA",
+        description: ["Sustainable", "Digitally Owned Assets "],
+      },
+      assets: ["yellow", "purple", "pink", "green"],
+      style: {
+        "--container-bg": "var(--green)",
       },
     },
   ];
@@ -116,6 +169,7 @@ export default function Containerisation({ isViewing = false }) {
                   Containers.map((container, index) => (
                     <div
                       className={`item ${current === index ? "active" : ""}`}
+                      style={container?.style}
                     >
                       <div className="icon">
                         <img
@@ -127,7 +181,32 @@ export default function Containerisation({ isViewing = false }) {
                         />
                       </div>
                       <h3 className="title">{container?.title}</h3>
+                      <h4 className="subtitle">
+                        {container?.subtitle?.map((st) => (
+                          <span>{st}</span>
+                        ))}
+                      </h4>
                       <p className="description">{container?.description}</p>
+                      <div className="card">
+                        <h4 className="title">{container?.card?.title}</h4>
+                        <p className="description">
+                          {container?.card?.description?.map((ds) => (
+                            <span>{ds}</span>
+                          ))}
+                        </p>
+                      </div>
+                      <div className="assets">
+                        {container?.assets?.map((asset) => (
+                          <button
+                            className={`asset`}
+                            onFocus={() => setExpHovered(asset)}
+                            onMouseEnter={() => setExpHovered(asset)}
+                            onBlur={() => setExpHovered()}
+                            onMouseLeave={() => setExpHovered()}
+                            style={{ background: `var(--${asset})` }}
+                          ></button>
+                        ))}
+                      </div>
                     </div>
                   ))
                 )}
@@ -139,12 +218,27 @@ export default function Containerisation({ isViewing = false }) {
                       className={`indicator ${
                         current === index ? "active" : ""
                       }`}
+                      onClick={() => setCurrent(index)}
                     ></button>
                   ))
                 )}
               </div>
             </div>
           </div>
+        </div>
+        <div className="info-chart">
+          {React.Children.toArray(
+            codeMeanings.map((code) => (
+              <div
+                className={`info ${
+                  ExpHovered === code?.handle ? "active" : ""
+                }`}
+              >
+                <i style={{ background: code?.color }}></i>
+                {code?.title}
+              </div>
+            ))
+          )}
         </div>
       </div>
     </section>
