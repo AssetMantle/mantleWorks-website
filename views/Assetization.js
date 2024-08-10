@@ -10,6 +10,7 @@ export default function Assetization() {
 
   const Data = [
     {
+      icon: "/media/asset/iDOA.svg",
       title: { lines: ["Trademarked", "iDOA Library"] },
       details: {
         content:
@@ -18,6 +19,7 @@ export default function Assetization() {
       },
     },
     {
+      icon: "/media/asset/iDCI.svg",
       title: { lines: ["Lorem", "iDCI"] },
       details: {
         content:
@@ -26,6 +28,7 @@ export default function Assetization() {
       },
     },
     {
+      icon: "/media/asset/iDoC.svg",
       title: { lines: ["Lorem", "iDoC"] },
       details: {
         content: "Levels of uniformity and interoperability",
@@ -33,6 +36,7 @@ export default function Assetization() {
       },
     },
     {
+      icon: "/media/asset/VDR.svg",
       title: { lines: ["VDR", "Modules"] },
       details: {
         content: "Identify anchored data access & change​",
@@ -40,6 +44,7 @@ export default function Assetization() {
       },
     },
     {
+      icon: "/media/asset/aOS.svg",
       title: { lines: ["aOS", "Rule Engine"] },
       details: {
         content: "A rules-based system for industrial Asset Realization​",
@@ -47,6 +52,7 @@ export default function Assetization() {
       },
     },
     {
+      icon: "/media/asset/UAB.svg",
       title: { lines: ["Lorem", "UAB"] },
       details: {
         content: "Inter asset ecosystem language translator​",
@@ -95,11 +101,19 @@ export default function Assetization() {
                         current === index ? "active" : ""
                       }`}
                     >
-                      <h3 className="title">
-                        {item?.title?.lines?.map((line) => (
-                          <span>{line}</span>
-                        ))}
-                      </h3>
+                      <div className="title-container">
+                        <div className="image">
+                          <img
+                            src={item?.icon}
+                            alt={item?.title?.lines?.join(" ")}
+                          />
+                        </div>
+                        <h3 className="title">
+                          {item?.title?.lines?.map((line) => (
+                            <span>{line}</span>
+                          ))}
+                        </h3>
+                      </div>
                       <p className="" style={item?.details?.style}>
                         {item?.details?.content}
                       </p>
