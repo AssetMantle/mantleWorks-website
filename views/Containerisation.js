@@ -2,10 +2,13 @@ import { montserrat } from "@/config/fonts/GoogleFonts";
 import React, { useState, useEffect } from "react";
 
 export default function Containerisation({ isViewing = false }) {
-  const startAnimation = isViewing;
+  const [startAnimation, setStartAnimation] = useState(false);
   const [current, setCurrent] = useState(0);
+  const [AnimateCube, setAnimateCube] = useState(false);
+  const [AutoAnimate, setAutoAnimate] = useState(true);
   const [ExpHovered, setExpHovered] = useState(0);
   const changingInterval = 5000;
+  const AnimationStart = 1000;
 
   const codeMeanings = [
     {
@@ -43,7 +46,7 @@ export default function Containerisation({ isViewing = false }) {
       description:
         "Unlocking diagnostic data to enhance research and clinical outcomes, delivering real value for patients",
       images: {
-        initial: "/media/containers/cubes/.png",
+        initial: "/media/containers/cubes/RedInitial.png",
         background: "/media/containers/cubes/RedBG.png",
         front: "/media/containers/cubes/RedSingle.png",
       },
@@ -63,7 +66,7 @@ export default function Containerisation({ isViewing = false }) {
       description:
         "Bridging info asymmetry for smarter property investing, fairer valuations, and performance-driven liquidity",
       images: {
-        initial: "/media/containers/cubes/.png",
+        initial: "/media/containers/cubes/BlueInitial.png",
         background: "/media/containers/cubes/BlueBG.png",
         front: "/media/containers/cubes/BlueSingle.png",
       },
@@ -83,7 +86,7 @@ export default function Containerisation({ isViewing = false }) {
       description:
         "Introducing loyalty assets that elevate customer loyalty, unlock exceptional experiences, and create an interoperable loyalty economy",
       images: {
-        initial: "/media/containers/cubes/.png",
+        initial: "/media/containers/cubes/OrangeInitial.png",
         background: "/media/containers/cubes/OrangeBG.png",
         front: "/media/containers/cubes/OrangeSingle.png",
       },
@@ -103,7 +106,7 @@ export default function Containerisation({ isViewing = false }) {
       description:
         "Tackling fragmented and inconsistent ESG data to enhance monitoring of ESG assets",
       images: {
-        initial: "/media/containers/cubes/.png",
+        initial: "/media/containers/cubes/GreenInitial.png",
         background: "/media/containers/cubes/GreenBG.png",
         front: "/media/containers/cubes/GreenSingle.png",
       },
@@ -119,17 +122,22 @@ export default function Containerisation({ isViewing = false }) {
   ];
 
   useEffect(() => {
+    !startAnimation && isViewing && setStartAnimation(true);
+    !AnimateCube && setTimeout(() => setAnimateCube(true), AnimationStart);
     setCurrent(0);
-  }, [startAnimation]);
+    setAutoAnimate(true);
+  }, [isViewing]);
 
   useEffect(() => {
-    const handleInterval = () => {
-      const value = (current + 1) % Containers.length;
-      setCurrent(value);
-    };
-    const intervalId = setInterval(handleInterval, changingInterval);
-    return () => clearInterval(intervalId);
-  }, [current, Containers.length]);
+    if (AnimateCube && AutoAnimate) {
+      const handleInterval = () => {
+        const value = (current + 1) % Containers.length;
+        setCurrent(value);
+      };
+      const intervalId = setInterval(handleInterval, changingInterval);
+      return () => clearInterval(intervalId);
+    }
+  }, [current, Containers.length, AutoAnimate, AnimateCube]);
 
   return (
     <section id="containerisation">
@@ -138,7 +146,18 @@ export default function Containerisation({ isViewing = false }) {
           <div className="graphics">
             {React.Children.toArray(
               Containers.map((container, index) => (
-                <div className={`cube ${current === index ? "active" : ""}`}>
+                <div
+                  className={`cube ${
+                    AnimateCube
+                      ? current === index
+                        ? "active"
+                        : ""
+                      : current === index
+                      ? "stopped"
+                      : ""
+                  }`}
+                  style={{ ...container?.style }}
+                >
                   <img
                     src={container?.images?.background}
                     alt={
@@ -148,21 +167,39 @@ export default function Containerisation({ isViewing = false }) {
                     }
                     className="bg"
                   />
-                  <img
-                    src={container?.images?.front}
-                    alt={
-                      container?.images?.front
-                        ?.split("/")?.[4]
-                        ?.split(".")?.[0] + " icon"
-                    }
-                    className="front"
-                  />
+                  <div className="front">
+                    <img
+                      src={container?.images?.initial}
+                      alt={
+                        container?.images?.front
+                          ?.split("/")?.[4]
+                          ?.split(".")?.[0] + " icon"
+                      }
+                      className="initial"
+                    />
+                    <img
+                      src={container?.images?.front}
+                      alt={
+                        container?.images?.front
+                          ?.split("/")?.[4]
+                          ?.split(".")?.[0] + " icon"
+                      }
+                      className="final"
+                    />
+                  </div>
+                  <div className="gradient"></div>
                 </div>
               ))
             )}
           </div>
           <div className="content-container">
-            <h2 className={`title ${montserrat?.className}`}>Our Containers</h2>
+            <h2
+              className={`title ${montserrat?.className}${
+                startAnimation ? " active" : " "
+              }`}
+            >
+              Our Containers
+            </h2>
             <div className={`slider${startAnimation ? " active" : " "}`}>
               <div className="content">
                 {React.Children.toArray(
@@ -218,7 +255,10 @@ export default function Containerisation({ isViewing = false }) {
                       className={`indicator ${
                         current === index ? "active" : ""
                       }`}
-                      onClick={() => setCurrent(index)}
+                      onClick={() => {
+                        setCurrent(index);
+                        setAutoAnimate(false);
+                      }}
                     ></button>
                   ))
                 )}
