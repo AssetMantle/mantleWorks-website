@@ -37,7 +37,6 @@ export default function Home() {
         <OurPractice />
         <OurPartners />
       </main>
-
       <SlideIndicator indicator={Position} />
       <Footer />
     </>
