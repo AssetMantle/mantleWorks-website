@@ -294,6 +294,7 @@ section {
   &-problems {
     width: min(1440px, 100%);
     display: flex;
+    overflow: visible;
     &-content {
       width: min(calc(1320px), 100%);
       padding: var(--header-height) 24px var(--footer-height);
@@ -546,6 +547,7 @@ section {
           & > h3 {
             width: min(var(--p-width, 300px), 100%);
             min-height: 4lh;
+            margin-top: 1rem;
           }
         }
       }
