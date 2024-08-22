@@ -76,7 +76,7 @@ export default function Containerisation({ isViewing = false }) {
       },
       assets: ["blue", "purple", "pink", "green"],
       style: {
-        "--container-bg": "var(--blue)",
+        "--container-bg": "var(--blue-dark)",
       },
     },
     {
