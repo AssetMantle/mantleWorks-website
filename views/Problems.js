@@ -5,10 +5,7 @@ import React, { useState, useEffect } from "react";
 
 export default function Problems() {
   const [current, setCurrent] = useState(1);
-  const [animationTrigger, setAnimationTrigger] = useState(0);
   const changingInterval = 5000;
-  const rotateAnimationTime = 900;
-  // filter: blur(106.952px);
 
   const problems = [
     {
@@ -68,17 +65,6 @@ export default function Problems() {
     const intervalId = setInterval(handleInterval, changingInterval);
     return () => clearInterval(intervalId);
   }, [current, problems.length]);
-
-  // useEffect(() => {
-  //   const handleInterval = () => {
-  //     setAnimationTrigger(true);
-  //     setTimeout(() => {
-  //       setAnimationTrigger(false);
-  //     }, rotateAnimationTime);
-  //   };
-  //   const intervalId = setInterval(handleInterval, changingInterval);
-  //   return () => clearInterval(intervalId);
-  // }, [current]);
 
   return (
     <section id="problems">
