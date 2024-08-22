@@ -973,7 +973,7 @@ section {
                 }
                 & > .image {
                   & > img {
-                    height: 52px;
+                    height: 48px;
                     width: auto;
                   }
                 }
@@ -983,6 +983,8 @@ section {
                   width: 100%;
                   font-size: 1.75rem;
                   color: var(--primary-dark);
+                  margin: 0;
+                  margin-top: 1rem;
                 }
               }
               & > p {
