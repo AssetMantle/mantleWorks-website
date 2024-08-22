@@ -10,8 +10,16 @@ export default function Assetization() {
 
   const Data = [
     {
+      icon: "/media/asset/iDoC.svg",
+      title: { lines: ["iDoC"] },
+      details: {
+        content: "Standards for uniformity and interoperability ",
+        style: { "--asset-width": "263px" },
+      },
+    },
+    {
       icon: "/media/asset/iDOA.svg",
-      title: { lines: ["Trademarked", "iDOA Library"] },
+      title: { lines: ["iDOA"] },
       details: {
         content:
           "Our proprietary standard for digitally owned assets from which all asset class are fabricated",
@@ -20,43 +28,35 @@ export default function Assetization() {
     },
     {
       icon: "/media/asset/iDCI.svg",
-      title: { lines: ["Lorem", "iDCI"] },
+      title: { lines: ["iDcI"] },
       details: {
         content:
-          "Our proprietary standard for digitally controlled identity implemented by our complete identity stack​",
+          "Our proprietary standard for digitally controlled identity implemented by our complete identity stack",
         style: { "--asset-width": "276px" },
       },
     },
     {
-      icon: "/media/asset/iDoC.svg",
-      title: { lines: ["Lorem", "iDoC"] },
+      icon: "/media/asset/UAB.svg",
+      title: { lines: ["UAB"] },
       details: {
-        content: "Levels of uniformity and interoperability",
-        style: { "--asset-width": "263px" },
+        content: "Our Inter asset ecosystem language translator",
+        style: { "--asset-width": "235px" },
       },
     },
     {
       icon: "/media/asset/VDR.svg",
-      title: { lines: ["VDR", "Modules"] },
+      title: { lines: ["VDR Modules"] },
       details: {
-        content: "Identify anchored data access & change​",
+        content: "To identify anchored data access & change",
         style: { "--asset-width": "226px" },
       },
     },
     {
       icon: "/media/asset/aOS.svg",
-      title: { lines: ["aOS", "Rule Engine"] },
+      title: { lines: ["aOS rule engine"] },
       details: {
-        content: "A rules-based system for industrial Asset Realization​",
+        content: "A rules-based system for Industrial Asset Realization",
         style: { "--asset-width": "263px" },
-      },
-    },
-    {
-      icon: "/media/asset/UAB.svg",
-      title: { lines: ["Lorem", "UAB"] },
-      details: {
-        content: "Inter asset ecosystem language translator​",
-        style: { "--asset-width": "235px" },
       },
     },
   ];
