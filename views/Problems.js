@@ -173,8 +173,8 @@ export default function Problems() {
                     <Image
                       src={`/media/problems/${item?.image}.png`}
                       alt="cube"
-                      width={100}
-                      height={100}
+                      width={500}
+                      height={500}
                       style={{ objectFit: "contain", objectPosition: "center" }}
                     />
                     <div className="bg"></div>
