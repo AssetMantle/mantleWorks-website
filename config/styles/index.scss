@@ -689,7 +689,7 @@ section {
         grid-column: 10 / span 6;
         display: flex;
         flex-direction: column;
-        gap: calc(16px);
+        gap: calc(20px);
         justify-content: center;
         @media (max-width: 670px) {
           // grid-column: 1 / span 1;
@@ -749,28 +749,66 @@ section {
               // @media (max-width: 670px) {
               //   gap: 16px;
               // }
+              @media (max-height: 800px) and (min-width: 800px) {
+                grid-template-columns: repeat(4, 1fr);
+                width: min(384px, 100%);
+                gap: 8px;
+              }
               &.active {
                 display: flex;
+                @media (max-height: 800px) and (min-width: 800px) {
+                  display: grid;
+                }
+                @media (max-width: 670px) {
+                  display: grid;
+                  grid-auto-flow: dense;
+                }
+              }
+              & > * {
+                @media (max-height: 800px) and (min-width: 800px) {
+                  grid-column: 2 / span 3;
+                }
+                @media (max-width: 670px) {
+                  grid-column: 1 / span 4;
+                }
               }
               & > .icon {
                 margin: 0 0 12px;
+                @media (max-height: 800px) and (min-width: 800px) {
+                  grid-column: 1 / span 1;
+                  text-align: left;
+                  margin-right: 24px;
+                }
+                @media (max-width: 670px) {
+                  grid-column: 1 / span 1;
+                  margin-right: 24px;
+                }
                 & > img {
                   height: 75px;
                   width: auto;
                 }
               }
-              & > .title {
-                font-size: 1.75rem;
-                font-weight: 700;
-                color: var(--primary-dark);
-              }
-              & > .subtitle {
-                font-size: 1.125rem;
-                font-weight: 600;
-                color: var(--primary-dark);
-                margin: 0 0 12px;
-                display: flex;
-                flex-direction: column;
+              & > .heading {
+                @media (max-height: 800px) and (min-width: 800px) {
+                  text-align: left !important;
+                }
+                @media (max-width: 670px) {
+                  grid-column: 2 / span 3;
+                  text-align: left;
+                }
+                & > .title {
+                  font-size: 1.75rem;
+                  font-weight: 700;
+                  color: var(--primary-dark);
+                }
+                & > .subtitle {
+                  font-size: 1.125rem;
+                  font-weight: 600;
+                  color: var(--primary-dark);
+                  margin: 0 0 12px;
+                  display: flex;
+                  flex-direction: column;
+                }
               }
               & > .description {
                 width: min(312px, 100%);
@@ -778,6 +816,12 @@ section {
                 color: var(--gray-dark);
                 margin: 0 0 12px;
                 height: 4lh;
+                @media (max-height: 800px) and (min-width: 800px) {
+                  text-align: left !important;
+                }
+                @media (max-width: 670px) {
+                  // text-align: left;
+                }
               }
               & > .card {
                 margin: 0 0 12px;
@@ -808,6 +852,15 @@ section {
                 align-items: center;
                 justify-content: center;
                 gap: 20px;
+                margin-top: 0.5rem;
+                @media (max-height: 800px) and (min-width: 800px) {
+                  justify-content: flex-start;
+                  padding-left: 1rem;
+                }
+                @media (max-width: 670px) {
+                  // justify-content: flex-start;
+                  // padding-left: 1rem;
+                }
                 & > .asset {
                   width: 20px;
                   aspect-ratio: 1/1;
