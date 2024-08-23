@@ -217,12 +217,14 @@ export default function Containerisation({ isViewing = false }) {
                           }
                         />
                       </div>
-                      <h3 className="title">{container?.title}</h3>
-                      <h4 className="subtitle">
-                        {container?.subtitle?.map((st) => (
-                          <span>{st}</span>
-                        ))}
-                      </h4>
+                      <div className="heading">
+                        <h3 className="title">{container?.title}</h3>
+                        <h4 className="subtitle">
+                          {container?.subtitle?.map((st) => (
+                            <span>{st}</span>
+                          ))}
+                        </h4>
+                      </div>
                       <p className="description">{container?.description}</p>
                       <div className="card">
                         <h4 className="title">{container?.card?.title}</h4>
