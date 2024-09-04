@@ -33,7 +33,7 @@ export default function OurPractice() {
       ],
     },
     intellectualSeeding: {
-      title: "Intellectual Seeding",
+      title: "Solutioning Framework",
       list: [
         {
           title: "Discovery",
