@@ -2,8 +2,10 @@
 import { montserrat } from "@/config/fonts/GoogleFonts";
 import Image from "next/image";
 import { useRef } from "react";
+import { useState } from "react";
 
 export default function WhatWeDo() {
+  const [Show, setShow] = useState(false);
   const videoRef = useRef();
   const buttonRef = useRef();
 
@@ -24,7 +26,7 @@ export default function WhatWeDo() {
       <div className="am-mw-container am-mw-work d-flex justify-content-center align-items-center flex-column h-100">
         <h2 className={`${montserrat.className}`}>What We Do</h2>
         <div className="video">
-          <video
+          {/* <video
             ref={videoRef}
             src="https://videos.pexels.com/video-files/6583334/6583334-uhd_2732_1318_30fps.mp4"
             poster="/media/bgs/work.png"
@@ -42,7 +44,15 @@ export default function WhatWeDo() {
               width={50}
               height={50}
             />
-          </button>
+          </button> */}
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/RJ1vxXeKgZ0?si=jsifRxs4iQJhDN35"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
         </div>
       </div>
     </section>
