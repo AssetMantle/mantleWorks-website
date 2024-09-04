@@ -10,7 +10,7 @@ export default function Assetization() {
 
   const Data = [
     {
-      icon: "/media/asset/iDoC.svg",
+      icon: "/media/asset/iDOC.svg",
       title: { lines: ["iDoC"] },
       details: {
         content: "Standards for uniformity and interoperability ",
