@@ -37,12 +37,39 @@
   }
 }
 
+@keyframes sliderAppear {
+  0% {
+    transform: translateX(500%) scale(0);
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    height: auto;
+    opacity: 1;
+  }
+}
+@keyframes sliderActive {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    background-color: transparent;
+  }
+  50% {
+    transform: rotate(45deg);
+    background-color: var(--slider-bg);
+    border-color: var(--slider-bg);
+  }
+}
+
 @keyframes problemBoxG1 {
   0%,
   100% {
     transform: rotate(0deg);
   }
   50% {
+    transform: rotate(31.3deg) translateX(16px) translateY(90px);
     transform: rotate(31.3deg) translateX(16px) translateY(90px);
   }
 }
