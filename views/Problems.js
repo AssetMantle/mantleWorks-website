@@ -13,9 +13,12 @@ export default function Problems() {
       value: 1,
       title: "Problem 1",
       buttonStyle: "",
-      description: "Inconsistency and mismatch across different systems",
+      subtitle: "Lack of Standards",
+      description:
+        "The absence of standardized practices leads to misrepresentation and duplication of resources ",
       style: {
-        "--p-width": "263px",
+        "--p-width": "401px",
+        "--p-color": "var(--red)",
         "--p-bg":
           "linear-gradient(151.51deg, rgba(255, 0, 0, 0.65) 25.91%, rgba(255, 0, 0, 0.3) 82.41%)",
         "--i-width": 417,
@@ -28,10 +31,12 @@ export default function Problems() {
       value: 2,
       title: "Problem 2",
       buttonStyle: "",
+      subtitle: "Lack of Verifiability",
       description:
-        "Difficulty in verifying the authenticity and integrity of stakeholders and assets",
+        "A trust-based transaction model undermines reliability within value chains & causes disconnect in market",
       style: {
-        "--p-width": "354px",
+        "--p-width": "457px",
+        "--p-color": "var(--green-dark)",
         "--p-bg":
           "linear-gradient(151.51deg, rgba(0, 255, 0, 0.65) 25.91%, rgba(0, 255, 0, 0.3) 82.41%)",
         "--i-width": 417,
@@ -43,11 +48,13 @@ export default function Problems() {
       image: 3,
       value: 3,
       title: "Problem 3",
+      subtitle: "Lack of Infrastructure",
       buttonStyle: "",
       description:
-        "Inaccessibility of critical assets when needed by authorized users.",
+        "Enterprise resources are often inaccessible in current markets due to lack of complementing enterprise grade Assetization infrastructure ",
       style: {
-        "--p-width": "364px",
+        "--p-width": "467px",
+        "--p-color": "var(--blue-dark)",
         "--p-bg":
           "linear-gradient(180deg, rgba(0, 0, 255, 0.6) 12.87%, rgba(0, 0, 255, 0.25) 112.87%)",
         "--i-width": 417,
@@ -179,7 +186,8 @@ export default function Problems() {
                     />
                     <div className="bg"></div>
                   </div>
-                  <h3 className="text-center">{item?.description}</h3>
+                  <h3 className="text-center">{item?.subtitle}</h3>
+                  <p className="text-center">{item?.description}</p>
                 </div>
               ))
             )}
