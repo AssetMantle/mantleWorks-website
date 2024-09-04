@@ -34,6 +34,7 @@
   --gray-dark: #565656;
 
   --green: #14f094;
+  --green-dark: #09cb7a;
   --blue: #54efea;
   --blue-dark: #0000ff;
   --yellow: rgba(229, 204, 12, 1);
@@ -42,6 +43,28 @@
   --pink: #ea37a3;
   --purple: #683ce4;
   --red: #ff2f49;
+
+  --container-title: linear-gradient(
+    270deg,
+    #0000ff -56.89%,
+    #00ff00 -28.22%,
+    #ff930f 38.09%,
+    #ff0000 101.71%
+  );
+  --asset-title: linear-gradient(
+    270deg,
+    #0000ff -23.78%,
+    #00ff00 35.9%,
+    #ff930f 108.01%,
+    #ff0000 139.51%
+  );
+  --practice-title: linear-gradient(
+    270deg,
+    #0000ff 26.84%,
+    #00ff00 80.56%,
+    #ff930f 118.93%,
+    #ff0000 162.68%
+  );
 
   --bg-white: var(--white-200);
 
@@ -325,7 +348,7 @@ section {
         & > p {
           font-size: 1.25rem;
           color: var(--gray);
-          font-weight: 600;
+          font-weight: 400;
           line-height: 120%;
           text-transform: uppercase;
           @media (max-width: 800px) {
@@ -481,7 +504,8 @@ section {
         }
         & > button {
           font-size: 1.375rem;
-          font-weight: 600;
+          font-weight: 500;
+          text-transform: uppercase;
           color: var(--gray);
           text-align: left;
           border: 0;
@@ -547,9 +571,15 @@ section {
             }
           }
           & > h3 {
-            width: min(var(--p-width, 300px), 100%);
-            min-height: 4lh;
+            color: var(--p-color) !important;
             margin-top: 1rem;
+            font-weight: 700;
+            font-size: 1.75rem;
+          }
+          & > p {
+            min-height: 3lh;
+            font-size: 1.125rem;
+            width: min(var(--p-width, 300px), 100%);
           }
         }
       }
@@ -700,9 +730,15 @@ section {
           justify-content: end;
         }
         & > .title {
-          font-size: 1.125rem;
-          color: var(--gray);
-          text-transform: uppercase;
+          font-size: 2rem;
+          font-weight: 700;
+          background: var(--container-title);
+          background-size: 80%;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+          text-transform: capitalize;
           text-align: center;
           margin: 0;
           transform: translateY(10lh);
@@ -947,9 +983,15 @@ section {
           justify-content: end;
         }
         & > .title {
-          font-size: 1.125rem;
-          color: var(--gray);
-          text-transform: uppercase;
+          font-size: 2rem;
+          font-weight: 700;
+          background: var(--asset-title);
+          background-size: 60%;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+          text-transform: capitalize;
           text-align: left;
         }
         & > .slider {
@@ -1113,7 +1155,17 @@ section {
     @media (max-height: 780px) {
       align-items: flex-start;
     }
-    & > .title,
+    & > .title {
+      font-size: 2rem;
+      font-weight: 700;
+      background: var(--practice-title);
+      background-size: 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      text-transform: capitalize;
+    }
     & > .container > .content > .title {
       font-size: 1.125rem;
       font-weight: 400;
