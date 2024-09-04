@@ -42,9 +42,9 @@ export default function Containerisation({ isViewing = false }) {
     {
       icon: "/media/containers/icons/Healthcare.png",
       title: "HealthCare",
-      subtitle: ["Transforming Data", "Into Assets"],
+      subtitle: ["Diagnostic Data", "As Assets"],
       description:
-        "Unlocking diagnostic data to enhance research and clinical outcomes, delivering real value for patients",
+        "Unlocking diagnostic data to enhance research & clinical outcomes, delivering real value for patients",
       images: {
         initial: "/media/containers/cubes/RedInitial.png",
         background: "/media/containers/cubes/RedBG.png",
@@ -60,11 +60,31 @@ export default function Containerisation({ isViewing = false }) {
       },
     },
     {
+      icon: "/media/containers/icons/ESG.png",
+      title: "ESG",
+      subtitle: ["Assetizing", "Sustainability"],
+      description:
+        "Tackling fragmented and inconsistent GHG emissions reporting to enhance monitoring of product LCAs",
+      images: {
+        initial: "/media/containers/cubes/GreenInitial.png",
+        background: "/media/containers/cubes/GreenBG.png",
+        front: "/media/containers/cubes/GreenSingle.png",
+      },
+      card: {
+        title: "sDoA",
+        description: ["Sustainable", "Digitally Owned Assets "],
+      },
+      assets: ["yellow", "purple", "pink", "green"],
+      style: {
+        "--container-bg": "var(--green)",
+      },
+    },
+    {
       icon: "/media/containers/icons/RealEstate.png",
       title: "Real Estate",
-      subtitle: ["Revolutionizing Transparency", "And Investment"],
+      subtitle: ["Enabling Ownership", "Fractionalization"],
       description:
-        "Bridging info asymmetry for smarter property investing, fairer valuations, and performance-driven liquidity",
+        "Lowering investment barriers with fair valuations and unlocking performance-driven liquidity throughout project construction",
       images: {
         initial: "/media/containers/cubes/BlueInitial.png",
         background: "/media/containers/cubes/BlueBG.png",
@@ -82,9 +102,9 @@ export default function Containerisation({ isViewing = false }) {
     {
       icon: "/media/containers/icons/Hospitality.png",
       title: "Hospitality",
-      subtitle: ["Reimagining", "Customer Loyalty"],
+      subtitle: ["Reimagining", "Community Loyalty"],
       description:
-        "Introducing loyalty assets that elevate customer loyalty, unlock exceptional experiences, and create an interoperable loyalty economy",
+        "Introducing loyalty assets that elevate community loyalty, unlock exceptional experiences, and create an interoperable loyalty economy",
       images: {
         initial: "/media/containers/cubes/OrangeInitial.png",
         background: "/media/containers/cubes/OrangeBG.png",
@@ -97,26 +117,6 @@ export default function Containerisation({ isViewing = false }) {
       assets: ["pink", "purple"],
       style: {
         "--container-bg": "var(--orange)",
-      },
-    },
-    {
-      icon: "/media/containers/icons/ESG.png",
-      title: "ESG",
-      subtitle: ["Assetizing", "Sustainability"],
-      description:
-        "Tackling fragmented and inconsistent ESG data to enhance monitoring of ESG assets",
-      images: {
-        initial: "/media/containers/cubes/GreenInitial.png",
-        background: "/media/containers/cubes/GreenBG.png",
-        front: "/media/containers/cubes/GreenSingle.png",
-      },
-      card: {
-        title: "sDoA",
-        description: ["Sustainable", "Digitally Owned Assets "],
-      },
-      assets: ["yellow", "purple", "pink", "green"],
-      style: {
-        "--container-bg": "var(--green)",
       },
     },
   ];
@@ -198,7 +198,7 @@ export default function Containerisation({ isViewing = false }) {
                 startAnimation ? " active" : " "
               }`}
             >
-              Our Containers
+              Containerized
             </h2>
             <div className={`slider${startAnimation ? " active" : " "}`}>
               <div className="content">
