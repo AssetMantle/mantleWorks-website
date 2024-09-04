@@ -17,9 +17,9 @@ export default function SlideIndicator({ indicator }) {
     {
       style: { "--indicator-bg": "var(--blue)" },
     },
-    {
-      style: { "--indicator-bg": "var(--green)" },
-    },
+    // {
+    //   style: { "--indicator-bg": "var(--green)" },
+    // },
   ];
 
   return (

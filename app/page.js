@@ -35,9 +35,8 @@ export default function Home() {
         <Containerisation isViewing={Position === 3} />
         <Assetization />
         <OurPractice />
-        <OurPartners />
+        {/* <OurPartners /> */}
       </main>
-
       <SlideIndicator indicator={Position} />
       <Footer />
     </>

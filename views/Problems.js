@@ -1,13 +1,11 @@
 "use client";
+import { montserrat } from "@/config/fonts/GoogleFonts";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 export default function Problems() {
-  const [current, setCurrent] = useState(0);
-  const [animationTrigger, setAnimationTrigger] = useState(0);
+  const [current, setCurrent] = useState(1);
   const changingInterval = 5000;
-  const rotateAnimationTime = 900;
-  // filter: blur(106.952px);
 
   const problems = [
     {
@@ -68,156 +66,90 @@ export default function Problems() {
     return () => clearInterval(intervalId);
   }, [current, problems.length]);
 
-  useEffect(() => {
-    const handleInterval = () => {
-      setAnimationTrigger(true);
-      setTimeout(() => {
-        setAnimationTrigger(false);
-      }, rotateAnimationTime);
-    };
-    const intervalId = setInterval(handleInterval, changingInterval);
-    return () => clearInterval(intervalId);
-  }, [current]);
-
   return (
     <section id="problems">
       <div className="am-mw-container am-mw-problems">
-        <div className="am-mw-problems-content d-flex align-items-center">
+        <div className="am-mw-problems-content">
           <div className="title">
-            <p className="m-0">Problems Faced</p>
+            <p className={`m-0 ${montserrat.className}`}>Problems Faced</p>
             <svg
               className="am-mw-problems-svg"
-              viewBox="0 0 480 800"
+              viewBox="0 0 800 800"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              style={{ "--p-time": rotateAnimationTime + "ms" }}
             >
-              <g
-                className={`${current + 1 === 1 ? "active" : ""} ${
-                  animationTrigger ? "g1" : ""
-                }`}
-              >
+              <g className={`box-1 ${"state-" + (current + 1)}`}>
                 <rect
-                  x="-256.718"
-                  y="588.494"
+                  x="120"
+                  y="120"
                   width="559"
                   height="559"
-                  transform="rotate(-75.7667 -256.718 588.494)"
-                  stroke="#FF0000"
-                  stroke-width="6"
-                />
-                <rect
-                  x="-256.718"
-                  y="588.494"
-                  width="559"
-                  height="559"
-                  transform="rotate(-75.7667 -256.718 588.494)"
-                  stroke="url(#paint1_linear_316_2308)"
+                  // stroke="url(#paint2_linear_1241_102)"
                   stroke-width="6"
                 />
               </g>
-              <g
-                className={`${current + 1 === 2 ? "active" : ""} ${
-                  animationTrigger ? "g2" : ""
-                }`}
-              >
+              <g className={`box-2 ${"state-" + (current + 1)}`}>
                 <rect
-                  x="-315.064"
-                  y="405.465"
+                  x="120"
+                  y="120"
                   width="559"
                   height="559"
-                  transform="rotate(-45.7667 -315.064 405.465)"
-                  stroke="#00FF00"
-                  stroke-width="6"
-                />
-                <rect
-                  x="-315.064"
-                  y="405.465"
-                  width="559"
-                  height="559"
-                  transform="rotate(-45.7667 -315.064 405.465)"
-                  stroke="url(#paint0_linear_316_2308)"
+                  // stroke="url(#paint1_linear_1241_102)"
                   stroke-width="6"
                 />
               </g>
-              <g
-                className={`${current + 1 === 3 ? "active" : ""} ${
-                  animationTrigger ? "g3" : ""
-                }`}
-              >
+              <g className={`box-3 ${"state-" + (current + 1)}`}>
                 <rect
-                  x="-263.978"
-                  y="206.722"
+                  x="120"
+                  y="120"
                   width="559"
                   height="559"
-                  transform="rotate(-15.7667 -263.978 206.722)"
-                  stroke="#0000FF"
-                  stroke-width="6"
-                />
-                <rect
-                  x="-263.978"
-                  y="206.722"
-                  width="559"
-                  height="559"
-                  transform="rotate(-15.7667 -263.978 206.722)"
-                  stroke="url(#paint2_linear_316_2308)"
+                  // stroke="url(#paint0_linear_1241_102)"
                   stroke-width="6"
                 />
               </g>
               <defs>
                 <linearGradient
-                  id="paint0_linear_316_2308"
-                  x1="245.359"
-                  y1="970.941"
-                  x2="-320.341"
-                  y2="406.119"
+                  id="paint0_linear_1241_102"
+                  x1="682"
+                  y1="117"
+                  x2="117"
+                  y2="682"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#F7F2EB" stop-opacity="0" />
-                  <stop offset="0.32" stop-color="#F7F2EB" />
+                  <stop offset="0.12" stop-color="#0000FF" />
+                  <stop offset="0.30" stop-color="#F7F2EB" stop-opacity="0" />
                 </linearGradient>
                 <linearGradient
-                  id="paint1_linear_316_2308"
-                  x1="304.301"
-                  y1="1156.08"
-                  x2="-261.399"
-                  y2="591.262"
+                  id="paint1_linear_1241_102"
+                  x1="682"
+                  y1="117"
+                  x2="117"
+                  y2="682"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#F7F2EB" stop-opacity="0" />
-                  <stop offset="0.42" stop-color="#F7F2EB" />
+                  <stop offset="0.12" stop-color="#00FF00" />
+                  <stop offset="0.30" stop-color="#F7F2EB" stop-opacity="0" />
                 </linearGradient>
                 <linearGradient
-                  id="paint2_linear_316_2308"
-                  x1="296.985"
-                  y1="770.07"
-                  x2="-268.715"
-                  y2="205.248"
+                  id="paint2_linear_1241_102"
+                  x1="682"
+                  y1="117"
+                  x2="117"
+                  y2="682"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#F7F2EB" stop-opacity="0" />
-                  <stop offset="0.32" stop-color="#F7F2EB" />
+                  <stop offset="0.12" stop-color="#FF0000" />
+                  <stop offset="0.30" stop-color="#F7F2EB" stop-opacity="0" />
                 </linearGradient>
               </defs>
             </svg>
-            {/* <svg
-              width="480"
-              height="800"
-              viewBox="0 0 480 800"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g opacity="0.3"></g>
-
-              <g opacity="0.3"></g>
-              
-            </svg> */}
           </div>
-          <div className="d-flex flex-column align-items-center justify-content-around h-100 statements">
+          <div className="statements">
             {React.Children.toArray(
               problems.map((item, index) => (
                 <button
-                  className={`border-0 bg-transparent ${item?.buttonStyle} ${
+                  className={`${montserrat.className} ${item?.buttonStyle} ${
                     current + 1 === item?.value ? "active" : ""
                   }`}
                   style={item?.style}
@@ -241,8 +173,8 @@ export default function Problems() {
                     <Image
                       src={`/media/problems/${item?.image}.png`}
                       alt="cube"
-                      width={100}
-                      height={100}
+                      width={500}
+                      height={500}
                       style={{ objectFit: "contain", objectPosition: "center" }}
                     />
                     <div className="bg"></div>

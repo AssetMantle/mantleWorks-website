@@ -10,7 +10,16 @@ export default function Assetization() {
 
   const Data = [
     {
-      title: { lines: ["Trademarked", "iDOA Library"] },
+      icon: "/media/asset/iDoC.svg",
+      title: { lines: ["iDoC"] },
+      details: {
+        content: "Standards for uniformity and interoperability ",
+        style: { "--asset-width": "263px" },
+      },
+    },
+    {
+      icon: "/media/asset/iDOA.svg",
+      title: { lines: ["iDOA"] },
       details: {
         content:
           "Our proprietary standard for digitally owned assets from which all asset class are fabricated",
@@ -18,39 +27,36 @@ export default function Assetization() {
       },
     },
     {
-      title: { lines: ["Lorem", "iDCI"] },
+      icon: "/media/asset/iDCI.svg",
+      title: { lines: ["iDcI"] },
       details: {
         content:
-          "Our proprietary standard for digitally controlled identity implemented by our complete identity stack​",
+          "Our proprietary standard for digitally controlled identity implemented by our complete identity stack",
         style: { "--asset-width": "276px" },
       },
     },
     {
-      title: { lines: ["Lorem", "iDoC"] },
+      icon: "/media/asset/UAB.svg",
+      title: { lines: ["UAB"] },
       details: {
-        content: "Levels of uniformity and interoperability",
-        style: { "--asset-width": "263px" },
+        content: "Our Inter asset ecosystem language translator",
+        style: { "--asset-width": "235px" },
       },
     },
     {
-      title: { lines: ["VDR", "Modules"] },
+      icon: "/media/asset/VDR.svg",
+      title: { lines: ["VDR Modules"] },
       details: {
-        content: "Identify anchored data access & change​",
+        content: "To identify anchored data access & change",
         style: { "--asset-width": "226px" },
       },
     },
     {
-      title: { lines: ["aOS", "Rule Engine"] },
+      icon: "/media/asset/aOS.svg",
+      title: { lines: ["aOS rule engine"] },
       details: {
-        content: "A rules-based system for industrial Asset Realization​",
+        content: "A rules-based system for Industrial Asset Realization",
         style: { "--asset-width": "263px" },
-      },
-    },
-    {
-      title: { lines: ["Lorem", "UAB"] },
-      details: {
-        content: "Inter asset ecosystem language translator​",
-        style: { "--asset-width": "235px" },
       },
     },
   ];
@@ -95,11 +101,19 @@ export default function Assetization() {
                         current === index ? "active" : ""
                       }`}
                     >
-                      <h3 className="title">
-                        {item?.title?.lines?.map((line) => (
-                          <span>{line}</span>
-                        ))}
-                      </h3>
+                      <div className="title-container">
+                        <div className="image">
+                          <img
+                            src={item?.icon}
+                            alt={item?.title?.lines?.join(" ")}
+                          />
+                        </div>
+                        <h3 className="title">
+                          {item?.title?.lines?.map((line) => (
+                            <span>{line}</span>
+                          ))}
+                        </h3>
+                      </div>
                       <p className="" style={item?.details?.style}>
                         {item?.details?.content}
                       </p>

@@ -1,6 +1,6 @@
 import { montserrat } from "@/config/fonts/GoogleFonts";
 import Image from "next/image";
-import React, { useState, useRef } from "react";
+import React, { useRef, useState } from "react";
 
 export default function OurPractice() {
   const [Email, setEmail] = useState();
@@ -69,6 +69,32 @@ export default function OurPractice() {
     },
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      // const response = { ok: true };
+      const localEmail = Email;
+      setEmail("");
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: localEmail }),
+      });
+
+      if (response.ok) {
+        alert("Email Subscribed Successfully!");
+      } else {
+        alert("Email Subscription Failed");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("Failed to subscribe Email");
+    }
+  };
+
   return (
     <section id="practice">
       <div className="am-mw-container am-mw-practice d-flex justify-content-center align-items-center flex-column h-100">
@@ -126,23 +152,20 @@ export default function OurPractice() {
             </div>
             <div className="subscribe">
               <h3 className="title2">Get In Touch</h3>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                required
-                value={Email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Email"
-              />
-              <button
-                className="am-mw-bg-gradient-red-blue"
-                onClick={(e) => {
-                  e.preventDefault();
-                }}
-              >
-                <span>Submit</span>
-              </button>
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  value={Email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Email"
+                />
+                <button className="am-mw-bg-gradient-red-blue" type="submit">
+                  <span>Submit</span>
+                </button>
+              </form>
             </div>
           </div>
           <div className="content">
