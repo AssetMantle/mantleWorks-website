@@ -69,11 +69,24 @@ export default function OurPractice() {
     },
   };
 
+  const validateEmail = (email) => {
+    // Regular expression to validate email with a TLD (e.g., .com, .one, etc.)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    return emailRegex.test(email);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Validate email before submitting
+    if (!validateEmail(Email)) {
+      alert(
+        "Please enter a valid email address"
+      );
+      return;
+    }
+
     try {
-      // const response = { ok: true };
       const localEmail = Email;
       setEmail("");
       const response = await fetch("/api/subscribe", {
@@ -142,13 +155,6 @@ export default function OurPractice() {
           <div className="content center">
             <div className="cube">
               <img src="/media/practice-2.gif" alt="cube rotation" />
-              {/* <video
-                src="/media/practice-cropped.gif"
-                autoPlay
-                loop
-                muted
-                playsInline
-              /> */}
             </div>
             <div className="subscribe">
               <h3 className="title2">Get In Touch</h3>
