@@ -14,27 +14,21 @@ export default function OurPractice() {
       list: [
         {
           title: "iDoA Library",
-          description: "The most important thing to keep",
         },
         {
           title: "iDoC Library",
-          description: "The most important thing to keep",
         },
         {
           title: "VDR",
-          description: "The most important thing to keep",
         },
         {
           title: "Explorer",
-          description: "The most important thing to keep",
         },
         {
           title: "Wallet",
-          description: "The most important thing to keep",
         },
         {
           title: "Marketplace",
-          description: "The most important thing to keep",
         },
       ],
     },
@@ -43,27 +37,21 @@ export default function OurPractice() {
       list: [
         {
           title: "Discovery",
-          description: "The most important thing to keep",
         },
         {
           title: "Identify",
-          description: "The most important thing to keep",
         },
         {
           title: "Segregate",
-          description: "The most important thing to keep",
         },
         {
           title: "Target",
-          description: "The most important thing to keep",
         },
         {
           title: "Solutionize",
-          description: "The most important thing to keep",
         },
         {
           title: "Implement",
-          description: "The most important thing to keep",
         },
       ],
     },
@@ -80,9 +68,7 @@ export default function OurPractice() {
 
     // Validate email before submitting
     if (!validateEmail(Email)) {
-      alert(
-        "Please enter a valid email address"
-      );
+      alert("Please enter a valid email address");
       return;
     }
 
@@ -111,7 +97,7 @@ export default function OurPractice() {
   return (
     <section id="practice">
       <div className="am-mw-container am-mw-practice d-flex justify-content-center align-items-center flex-column h-100">
-        <h2 className={`${montserrat.className} title`}>Our Practice</h2>
+        <h2 className={`${montserrat.className} title`}>Practice</h2>
         <div className="container">
           <div className="content">
             <h3 className="title">{Data?.products?.title}</h3>
