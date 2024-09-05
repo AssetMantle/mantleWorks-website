@@ -5,6 +5,7 @@ import SlideIndicator from "@/components/SlideIndicator";
 import Assetization from "@/views/Assetization";
 import Containerisation from "@/views/Containerisation";
 import Hero from "@/views/Hero";
+import MobileGetInTouch from "@/views/MobileGetInTouch";
 import OurPractice from "@/views/OurPractice";
 import Problems from "@/views/Problems";
 import WhatWeDo from "@/views/WhatWeDo";
@@ -34,6 +35,7 @@ export default function Home() {
         <Containerisation isViewing={Position === 3} />
         <Assetization />
         <OurPractice />
+        <MobileGetInTouch />
         {/* <OurPartners /> */}
       </main>
       <SlideIndicator indicator={Position} />
