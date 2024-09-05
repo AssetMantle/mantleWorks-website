@@ -1,4 +1,5 @@
 import { montserrat } from "@/config/fonts/GoogleFonts";
+import { handleSubmit } from "@/utils/subscribe";
 import Image from "next/image";
 import React, { useRef, useState } from "react";
 
@@ -57,49 +58,12 @@ export default function OurPractice() {
     },
   };
 
-  const validateEmail = (email) => {
-    // Regular expression to validate email with a TLD (e.g., .com, .one, etc.)
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-    return emailRegex.test(email);
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    // Validate email before submitting
-    if (!validateEmail(Email)) {
-      alert("Please enter a valid email address");
-      return;
-    }
-
-    try {
-      const localEmail = Email;
-      setEmail("");
-      const response = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email: localEmail }),
-      });
-
-      if (response.ok) {
-        alert("Email Subscribed Successfully!");
-      } else {
-        alert("Email Subscription Failed");
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      alert("Failed to subscribe Email");
-    }
-  };
-
   return (
     <section id="practice">
       <div className="am-mw-container am-mw-practice d-flex justify-content-center align-items-center flex-column h-100">
         <h2 className={`${montserrat.className} title`}>Practice</h2>
         <div className="container">
-          <div className="content">
+          <div className="content left">
             <h3 className="title">{Data?.products?.title}</h3>
             <button
               className="arrow dir-left"
@@ -142,9 +106,9 @@ export default function OurPractice() {
             <div className="cube">
               <img src="/media/practice-2.gif" alt="cube rotation" />
             </div>
-            <div className="subscribe">
+            <div className="am-mw-subscribe subscribe">
               <h3 className="title2">Get In Touch</h3>
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={(e) => handleSubmit(e, Email, setEmail)}>
                 <input
                   type="email"
                   name="email"
@@ -160,7 +124,7 @@ export default function OurPractice() {
               </form>
             </div>
           </div>
-          <div className="content">
+          <div className="content right">
             <h3 className="title">{Data?.intellectualSeeding?.title}</h3>
             <button
               className="arrow dir-left"
