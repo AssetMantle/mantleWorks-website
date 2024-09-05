@@ -27,7 +27,7 @@ export default function WhatWeDo() {
         <h2 className={`${montserrat.className}`}>What We Do</h2>
         <div className="video">
           <iframe
-            src="https://www.youtube-nocookie.com/embed/RJ1vxXeKgZ0?si=jsifRxs4iQJhDN35"
+            src="https://www.youtube.com/embed/RJ1vxXeKgZ0?si=cipHzBupPgwO9UgV?rel=0%22"
             title="YouTube video player"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
