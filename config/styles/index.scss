@@ -652,11 +652,11 @@ section {
           }
           & > h3 {
             color: var(--p-color) !important;
-            margin-top: 1rem;
             font-weight: 700;
             font-size: 1.75rem;
           }
           & > p {
+            margin-top: 1rem;
             min-height: 3lh;
             font-size: 1.25rem;
             width: min(var(--p-width, 300px), 100%);
