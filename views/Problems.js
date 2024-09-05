@@ -17,7 +17,7 @@ export default function Problems() {
       description:
         "The absence of standardized practices leads to misrepresentation and duplication of resources ",
       style: {
-        "--p-width": "401px",
+        "--p-width": "361px",
         "--p-color": "var(--red)",
         "--p-bg":
           "linear-gradient(151.51deg, rgba(255, 0, 0, 0.65) 25.91%, rgba(255, 0, 0, 0.3) 82.41%)",
@@ -35,7 +35,7 @@ export default function Problems() {
       description:
         "A trust-based transaction model undermines reliability within value chains & causes disconnect in market",
       style: {
-        "--p-width": "457px",
+        "--p-width": "415px",
         "--p-color": "var(--green-dark)",
         "--p-bg":
           "linear-gradient(151.51deg, rgba(0, 255, 0, 0.65) 25.91%, rgba(0, 255, 0, 0.3) 82.41%)",
@@ -53,7 +53,7 @@ export default function Problems() {
       description:
         "Enterprise resources are often inaccessible in current markets due to lack of complementing enterprise grade Assetization infrastructure ",
       style: {
-        "--p-width": "467px",
+        "--p-width": "475px",
         "--p-color": "var(--blue-dark)",
         "--p-bg":
           "linear-gradient(180deg, rgba(0, 0, 255, 0.6) 12.87%, rgba(0, 0, 255, 0.25) 112.87%)",
@@ -78,7 +78,12 @@ export default function Problems() {
       <div className="am-mw-container am-mw-problems">
         <div className="am-mw-problems-content">
           <div className="title">
-            <p className={`m-0 ${montserrat.className}`}>Problems Faced</p>
+            <div className="text">
+              <p className={`m-0 ${montserrat.className}`}>The challenge:</p>
+              <h2 className={`m-0 ${montserrat.className}`}>
+                Unlocking Value in Illiquid Resources
+              </h2>
+            </div>
             <svg
               className="am-mw-problems-svg"
               viewBox="0 0 800 800"
@@ -162,7 +167,7 @@ export default function Problems() {
                   style={item?.style}
                   onClick={() => setCurrent(index)}
                 >
-                  {item?.title}
+                  <span>{item?.subtitle}</span>
                 </button>
               ))
             )}
@@ -186,7 +191,7 @@ export default function Problems() {
                     />
                     <div className="bg"></div>
                   </div>
-                  <h3 className="text-center">{item?.subtitle}</h3>
+                  {/* <h3 className="text-center">{item?.subtitle}</h3> */}
                   <p className="text-center">{item?.description}</p>
                 </div>
               ))
