@@ -293,15 +293,11 @@ section {
       text-transform: uppercase;
     }
     & > .video {
-      width: 100%;
-      aspect-ratio: 1192/476;
+      width: min(846.22px, 100%);
+      aspect-ratio: 16/9;
       position: relative;
       overflow: hidden;
       border-radius: 8px;
-      @media (max-height: 720px) {
-        height: 60dvh;
-        width: auto;
-      }
       & > video,
       & > iframe {
         width: 100%;
