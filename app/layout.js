@@ -5,6 +5,11 @@ import "@/config/styles/index.scss";
 export const metadata = {
   title: "MantleWorks",
   description: "The institutional assetization arm of AssetMantle",
+  icons: {
+    icon: "/favicon.ico", // Standard favicon for most browsers
+    shortcut: "/favicon-32x32.png", // PNG for Safari and modern browsers
+    apple: "/apple-touch-icon.png", // Icon for iOS devices
+  },
 };
 
 export default function RootLayout({ children }) {
