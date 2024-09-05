@@ -783,18 +783,19 @@ section {
               align-items: center;
               justify-content: center;
               text-align: center;
-              width: min(278px, 100%);
               grid-template-columns: repeat(4, 1fr);
               width: min(384px, 100%);
               gap: 8px;
               // gap: 16px;
-              // @media (max-width: 670px) {
-              //   gap: 16px;
-              // }
+              @media (max-width: 670px) {
+                grid-auto-flow: dense;
+                width: min(312px, 100%);
+              }
               &.active {
                 display: grid;
                 @media (max-width: 670px) {
                   grid-auto-flow: dense;
+                  width: min(312px, 100%);
                 }
               }
               & > * {
