@@ -5,7 +5,6 @@ import SlideIndicator from "@/components/SlideIndicator";
 import Assetization from "@/views/Assetization";
 import Containerisation from "@/views/Containerisation";
 import Hero from "@/views/Hero";
-import OurPartners from "@/views/OurPartners";
 import OurPractice from "@/views/OurPractice";
 import Problems from "@/views/Problems";
 import WhatWeDo from "@/views/WhatWeDo";
