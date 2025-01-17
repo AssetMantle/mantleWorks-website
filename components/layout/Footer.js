@@ -21,7 +21,7 @@ export default function Footer() {
         </div>
         <div className="socials">
           <Link
-            href="mailto:hello@mantlewroks.one"
+            href="mailto:hello@mantleworks.one"
             className="icon position-relative"
           >
             <Image
