@@ -6,8 +6,8 @@ export default function Footer() {
   return (
     <footer className="am-mw-footer position-fixed bottom-0 start-0 end-0 w-100">
       <div className="am-mw-footer-line"></div>
-      <div className="am-mw-footer-container d-flex flex-column-reverse flex-md-row align-items-center justify-content-md-between gap-2">
-        <div className="left">
+      <div className="am-mw-footer-container d-flex flex-column flex-md-row align-items-center justify-content-md-between gap-1 gap-md-2">
+        <div className="left justify-contents-center justify-contents-md-start">
           <Link href="#hero" className="logo position-relative">
             <Image
               src={Logo}
@@ -17,8 +17,9 @@ export default function Footer() {
             />
           </Link>
 
-          <p className="m-0">&copy; MantleWorks 2024 - All rights reserved </p>
+          <p className="m-0">20A, Tanjong Pagar Road, Singapore - 088443</p>
         </div>
+        <p className="m-0">&copy; MantleWorks 2024 - All rights reserved</p>
         <div className="socials">
           <Link
             href="mailto:hello@mantleworks.one"

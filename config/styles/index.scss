@@ -76,6 +76,12 @@
 
   --header-height: 64px;
   --footer-height: 84px;
+  @media (max-width: 767px) {
+    --footer-height: 128px;
+  }
+  @media (max-width: 670px) {
+    --footer-height: 100px;
+  }
 }
 
 html {
@@ -1535,7 +1541,7 @@ section {
           display: inline-flex;
           aspect-ratio: 137.41/16;
           margin-right: auto;
-          @media (max-width: 670px) {
+          @media (max-width: 767px) {
             height: 14px;
             margin-left: auto;
           }
@@ -1554,7 +1560,7 @@ section {
           display: flex;
           aspect-ratio: 1/1;
           margin-right: auto;
-          @media (max-width: 670px) {
+          @media (max-width: 767px) {
             width: 16px;
             margin-left: auto;
           }
