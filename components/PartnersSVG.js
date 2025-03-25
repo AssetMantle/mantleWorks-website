@@ -1,4 +1,4 @@
-export default function PartnersSVG({ active, onHover = () => {} }) {
+export default function PartnersSVG({ active = "all", onHover = () => {} }) {
   return (
     <svg
       viewBox="0 0 1440 900"
@@ -15,12 +15,12 @@ export default function PartnersSVG({ active, onHover = () => {} }) {
           height="159.183"
           transform="rotate(11.1039 163.706 278.14)"
           fill="url(#pattern2_1193_473)"
-          opacity={active === 0 ? "1" : "0.4"}
+          opacity={active === 0 || active === "all" ? "1" : "0.4"}
           onClick={() => onHover(0)}
           onMouseEnter={() => onHover(0)}
         />
         <rect
-          opacity={active === 1 ? "1" : "0.4"}
+          opacity={active === 1 || active === "all" ? "1" : "0.4"}
           onClick={() => onHover(1)}
           onMouseEnter={() => onHover(1)}
           x="-22"
@@ -30,7 +30,7 @@ export default function PartnersSVG({ active, onHover = () => {} }) {
           fill="url(#pattern1_1193_473)"
         />
         <rect
-          opacity={active === 2 ? "1" : "0.4"}
+          opacity={active === 2 || active === "all" ? "1" : "0.4"}
           onClick={() => onHover(2)}
           onMouseEnter={() => onHover(2)}
           x="245"
@@ -40,7 +40,7 @@ export default function PartnersSVG({ active, onHover = () => {} }) {
           fill="url(#pattern3_1193_473)"
         />
         <rect
-          opacity={active === 3 ? "1" : "0.4"}
+          opacity={active === 3 || active === "all" ? "1" : "0.4"}
           onClick={() => onHover(3)}
           onMouseEnter={() => onHover(3)}
           x="464"

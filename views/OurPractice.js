@@ -106,7 +106,7 @@ export default function OurPractice() {
             <div className="cube">
               <img src="/media/practice-2.gif" alt="cube rotation" />
             </div>
-            <div className="am-mw-subscribe subscribe">
+            {/* <div className="am-mw-subscribe subscribe">
               <h3 className="title2">Get In Touch</h3>
               <form onSubmit={(e) => handleSubmit(e, Email, setEmail)}>
                 <input
@@ -122,7 +122,7 @@ export default function OurPractice() {
                   <span>Submit</span>
                 </button>
               </form>
-            </div>
+            </div> */}
           </div>
           <div className="content right">
             <h3 className="title">{Data?.intellectualSeeding?.title}</h3>
